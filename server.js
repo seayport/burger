@@ -10,7 +10,7 @@ var express = require("express");
 var app = express();
 
 // Specify the port.
-var port = 3001;
+//var port = 3001;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
@@ -31,4 +31,5 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port);
+//app.listen(port);
+app.listen(process.env.PORT || 3001);
